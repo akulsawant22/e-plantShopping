@@ -1,0 +1,104 @@
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Landing page */
+.landing-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease;
+}
+
+.landing-page.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+/* Background image for the Paradise Nursery landing page */
+.background-image {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.background-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 24px;
+  max-width: 1200px;
+}
+
+.landing_content {
+  color: #ffffff;
+  text-align: center;
+  max-width: 480px;
+}
+
+.landing_content h1 {
+  font-size: 2.8rem;
+  margin: 0 0 12px;
+}
+
+.landing_content p {
+  font-size: 1.3rem;
+  margin: 12px 0 28px;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background-color: #4caf50;
+  margin: 0 auto;
+}
+
+.get-started-button {
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-button:hover {
+  background-color: #388e3c;
+}
+
+.aboutus_container {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Product list */
+.product-list-container {
+  display: none;
+}
+
+.product-list-container.visible {
+  display: block;
+}
